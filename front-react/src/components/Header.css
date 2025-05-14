@@ -1,0 +1,58 @@
+.header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 6rem; /* 세로 공간 유지하고 가로 여백 늘림 */
+    width: 95%; /* 화면 너비 확장 */
+    margin: 0 auto;
+  }
+  
+  .logo a {
+    text-decoration: none;
+  }
+  
+  .logo h1 {
+    margin-left: 0%;
+    color: #FF6B00; /* 주황색 */
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #1E3A8A; /* 남색 */
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #FF6B00; /* 주황색 */
+  }
+  
+  .signup-btn {
+    background-color: #1E3A8A; /* 남색 */
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+  
+  .signup-btn:hover {
+    background-color: #0F2B76;
+    color: white;
+  }
