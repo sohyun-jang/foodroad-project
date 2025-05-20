@@ -8,30 +8,24 @@ import EventRecommendationPage from './pages/EventRecommendationPage';
 import { AuthProvider } from './contexts/AuthContext';
 import './App.css';
 
-function AppContent() {
-  return (
-    <div className="App">
-      <Header />
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignupPage />} />
-        <Route path="/event-recommendations" element={<EventRecommendationPage />} />
-        <Route path="/favorite-events" element={<MainPage />} /> {/* 추후 구현 */}
-        <Route path="/event-map" element={<MainPage />} /> {/* 추후 구현 */}
-        <Route path="/foodtruck-overview" element={<MainPage />} /> {/* 추후 구현 */}
-        <Route path="/event-reviews" element={<MainPage />} /> {/* 추후 구현 */}
-        <Route path="/mypage" element={<MainPage />} /> {/* 추후 구현 */}
-      </Routes>
-    </div>
-  );
-}
-
 function App() {
   return (
     <Router>
       <AuthProvider>
-        <AppContent />
+        <div className="App">
+          <Header />
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/signup" element={<SignupPage />} />
+            <Route path="/event-recommendations" element={<EventRecommendationPage />} />
+            <Route path="/favorite-events" element={<MainPage />} />
+            <Route path="/event-map" element={<MainPage />} />
+            <Route path="/foodtruck-overview" element={<MainPage />} />
+            <Route path="/event-reviews" element={<MainPage />} />
+            <Route path="/mypage" element={<MainPage />} />
+          </Routes>
+        </div>
       </AuthProvider>
     </Router>
   );
