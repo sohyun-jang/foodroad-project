@@ -1,0 +1,732 @@
+.main-page {
+  padding-top: 100px;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* 헤더 아래 섹션 스타일 */
+.header-section {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  padding: 4rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.header-text {
+  flex: 1;
+}
+
+.header-text h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #000000;
+  background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #666;
+  font-style: italic;
+}
+
+.header-features {
+  display: flex;
+  gap: 2rem;
+}
+
+.header-features .feature-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.header-features .feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header-features .feature-icon {
+  font-size: 2rem;
+  color: #ff6b6b;
+}
+
+.header-image {
+  flex: 1;
+}
+
+.header-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 타겟층별 소개 섹션 */
+.target-groups-section {
+  padding: 4rem 1.5rem;
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.target-groups-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://via.placeholder.com/1920x1080?text=Food+Pattern') center/cover;
+  opacity: 0.05;
+  z-index: 0;
+}
+
+.target-groups-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.target-groups-section h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+.target-groups-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.target-group-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.target-group-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.target-group-card:hover::before {
+  opacity: 0.1;
+}
+
+.target-group-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.target-group-card.active {
+  border: 2px solid #ff6b6b;
+}
+
+.target-group-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  animation: bounce 1.5s infinite;
+  color: #ff6b6b;
+}
+
+.target-group-image {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.target-group-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4));
+}
+
+.target-group-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.target-group-card:hover .target-group-image img {
+  transform: scale(1.05);
+}
+
+.target-group-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 1rem;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.target-group-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+  animation: fadeInUp 0.5s ease-out 0.2s;
+}
+
+.target-group-features {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  animation: fadeInUp 0.5s ease-out 0.4s;
+}
+
+.feature-dot {
+  font-size: 1.5rem;
+  color: #ff6b6b;
+}
+
+/* 히어로 섹션 */
+.hero-section {
+  background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+  padding: 8rem 1.5rem 4rem;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://via.placeholder.com/1920x1080?text=Food+Truck+Pattern') center/cover;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #ffffff, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInDown 1s ease-out;
+}
+
+.hero-description {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease-out 0.5s;
+}
+
+.hero-features {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  animation: fadeInUp 1s ease-out 1s;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff6b6b;
+}
+
+/* 애니메이션 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* 행사 목록 */
+.events-container {
+  flex: 1.5;
+}
+
+.events-container h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  width: 100%;
+  padding: 0.8rem;
+  position: relative;
+}
+
+/* 행사 카드 */
+.main-page .event-card {
+  display: flex;
+  flex-direction: row;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+  width: 100%;
+  margin: 0 auto;
+  aspect-ratio: 16/5;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.main-page .event-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.main-page .event-image {
+  width: 40%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.main-page .event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-page .event-info {
+  padding: 1.2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-page .event-info h3 {
+  margin: 0 0 0.8rem;
+  color: #000000;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.main-page .event-date, .main-page .event-location {
+  margin: 0.2rem 0;
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.main-page .event-description {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+  color: #333;
+  flex-grow: 1;
+  line-height: 1.5;
+}
+
+.main-page .event-link {
+  align-self: flex-start;
+  color: #000000;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  background-color: #f2f2f7;
+  transition: all 0.2s ease;
+}
+
+.main-page .event-link:hover {
+  background-color: #e5e5ea;
+}
+
+/* 행사 네비게이션 버튼 */
+.events-nav-button {
+  width: 50%;
+  padding: 0.5rem;
+  background-color: #f5f5f7;
+  border: none;
+  border-radius: 4px;
+  color: #333;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin: 0.1rem 0;
+}
+
+.events-nav-button:hover {
+  background-color: #e5e5ea;
+}
+
+/* 지도 영역 */
+.map-container h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #000000;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* 기능 소개 섹션 */
+.features-section {
+  padding: 5rem 4rem;
+  background-color: #ffffff;
+}
+
+.feature {
+  max-width: 1080px;
+  margin: 0 auto 6rem;
+}
+
+.feature:last-child {
+  margin-bottom: 0;
+}
+
+.feature h2 {
+  text-align: center;
+  color: #000000;
+  margin-bottom: 3rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.feature-content {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.feature-content.reverse {
+  flex-direction: row-reverse;
+}
+
+.feature-image {
+  flex: 1;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.feature-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.feature-description {
+  flex: 1;
+}
+
+.feature-description h3 {
+  color: #000000;
+  margin: 1.5rem 0 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.feature-description p {
+  color: #333333;
+  line-height: 1.6;
+  margin-bottom: 1.8rem;
+  font-size: 1rem;
+}
+
+/* 푸터 */
+.main-footer {
+  background-color: #f5f5f7;
+  color: #333333;
+  padding: 4rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.company-info {
+  flex: 1;
+}
+
+.company-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+.company-info p {
+  margin: 0.5rem 0;
+  color: #666666;
+  font-size: 0.95rem;
+}
+
+.footer-links {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.footer-links h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  text-align: right;
+}
+
+.footer-links li {
+  margin: 0.7rem 0;
+}
+
+.footer-links a {
+  color: #666666;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+  color: #000000;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  color: #666666;
+  font-size: 0.9rem;
+}
+
+.event-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.event-card.selected {
+  border: 2px solid #4CAF50;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.map-placeholder {
+  cursor: grab;
+}
+
+.map-placeholder > div {
+  cursor: grab;
+}
+
+.map-placeholder > div:active {
+  cursor: grabbing;
+}
+
+.map-overlay {
+  display: none;
+}
+
+/* 반응형 */
+@media (max-width: 1200px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .header-text {
+    margin-bottom: 2rem;
+  }
+  
+  .header-image {
+    order: -1;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .hero-section {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .events-container, .map-container {
+    width: 100%;
+  }
+
+  .feature-content, .feature-content.reverse {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .features-section {
+    padding: 3rem 2rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .footer-links {
+    align-items: flex-start;
+    margin-top: 2rem;
+  }
+
+  .footer-links ul {
+    text-align: left;
+  }
+
+  .main-footer {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-page .event-card {
+    flex-direction: column;
+    aspect-ratio: 3/4;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .main-page .event-image {
+    width: 100%;
+    height: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-page .event-image {
+    height: 40%;
+  }
+
+  .feature h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .feature-description h3 {
+    font-size: 1.2rem;
+  }
+
+  .events-nav-button {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .target-groups-wrapper {
+    grid-template-columns: 1fr;
+  }
+  
+  .target-group-card {
+    padding: 1.5rem;
+  }
+}
