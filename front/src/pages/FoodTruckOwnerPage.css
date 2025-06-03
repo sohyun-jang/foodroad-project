@@ -1,0 +1,85 @@
+.foodtruck-owner-container {
+  padding: 100px 20px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+.foodtruck-owner-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.foodtruck-grid {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  min-width: min-content;
+}
+
+.foodtruck-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  flex: 0 0 300px;
+  width: 300px;
+}
+
+.foodtruck-card:hover {
+  transform: translateY(-5px);
+}
+
+.foodtruck-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.foodtruck-info {
+  padding: 20px;
+}
+
+.foodtruck-info h3 {
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.owner-name, .cuisine-type {
+  margin: 5px 0;
+  color: #666;
+}
+
+.rating-reviews {
+  display: flex;
+  gap: 15px;
+  margin: 10px 0;
+  color: #666;
+}
+
+.description {
+  margin: 10px 0;
+  color: #444;
+  line-height: 1.4;
+}
+
+.contact {
+  margin: 10px 0;
+  color: #666;
+}
+
+.availability-status {
+  margin-top: 10px;
+}
+
+.available {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.unavailable {
+  color: #e74c3c;
+  font-weight: bold;
+}

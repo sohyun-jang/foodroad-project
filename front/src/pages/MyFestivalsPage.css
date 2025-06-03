@@ -1,0 +1,70 @@
+.my-festivals-container {
+  padding: 20px;
+  padding-top: 100px; /* 헤더와 겹치지 않도록 상단 여백 추가 */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.my-festivals-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.register-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.register-btn:hover {
+  background-color: #0056b3;
+}
+
+.festivals-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.festival-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.festival-card h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.festival-card p {
+  margin: 8px 0;
+  color: #666;
+}
+
+.festival-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.festival-actions button {
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.festival-actions button:hover {
+  background-color: #f5f5f5;
+}

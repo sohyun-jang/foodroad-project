@@ -1,0 +1,173 @@
+.event-reviews-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  padding-top: 100px; /* 헤더 높이보다 큰 값으로 설정 */
+  overflow-x: auto;
+}
+
+.festivals-grid {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 0.5rem;
+  min-width: min-content;
+}
+
+.festival-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s;
+  flex: 0 0 280px;
+  width: 280px;
+}
+
+.festival-card:hover {
+  transform: translateY(-4px);
+}
+
+.festival-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.festival-info {
+  padding: 1rem;
+}
+
+.festival-info h3 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.festival-info p {
+  margin: 0.25rem 0;
+  color: #666;
+}
+
+.review-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  color: #666;
+}
+
+
+.review-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.review-modal {
+  background-color: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal-header {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+  padding: 0.5rem;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+.reviews-list {
+  padding: 1rem;
+}
+
+.review-item {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.review-item:last-child {
+  border-bottom: none;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.username {
+  font-weight: bold;
+  color: #333;
+}
+
+.rating {
+  color: #ffd700;
+}
+
+.date {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.review-content {
+  margin: 0;
+  color: #444;
+  line-height: 1.4;
+}
+
+.write-review-section {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  text-align: right;
+}
+
+.write-review-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.write-review-button:hover {
+  background-color: #0056b3;
+}
