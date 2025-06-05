@@ -1,0 +1,241 @@
+.event-recommendation-map {
+  width: 100%;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.event-map-layout {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start; /* Add this line to align left and right sides vertically */
+}
+
+/* 왼쪽 이벤트 목록 영역 */
+.event-list-side {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-height: 800px;
+  overflow-y: auto;
+  border: none; /* Remove yellow border */
+}
+
+/* 오른쪽 지도 영역 */
+.event-map-side {
+  flex: 1.20; /* 4:5 비율 설정 */
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: relative;
+  border: none; /* Remove yellow border */
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  background-color: #FF6B00; /* Change to blue background */
+  color: #ffffff; /* Change to white text */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* 이벤트 카드 컨테이너 */
+.event-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 이벤트 카드 스타일 */
+.event-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid #eaeaea;
+}
+
+.event-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.event-card.selected {
+  border: 2px solid #4285F4;
+  box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+}
+
+.event-card-content {
+  padding: 16px;
+}
+
+.event-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.event-date,
+.event-location {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.event-description {
+  font-size: 14px;
+  color: #666;
+  margin: 10px 0;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.event-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+  font-size: 13px;
+  color: #666;
+}
+
+.event-profitability,
+.event-weather,
+.event-visitors,
+.event-category {
+  margin: 4px 0;
+}
+
+/* 페이지네이션 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.pagination-button {
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background-color: #15295e;
+}
+
+.pagination-button:disabled {
+  background-color: #b0b0b0;
+  cursor: not-allowed;
+}
+
+.page-indicator {
+  font-size: 14px;
+  color: #555;
+}
+
+/* 지도 컨테이너 */
+.event-map-container {
+  width: 100%;
+  height: 700px;
+  position: relative;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* 이벤트 범례 */
+.event-legend {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  z-index: 10;
+  max-width: 200px;
+}
+
+.event-legend h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+
+.legend-icon {
+  font-size: 14px;
+}
+
+/* Google Maps 정보창 커스텀 스타일 */
+.info-window {
+  padding: 0px 14px 1px 16px;
+  max-width: 300px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.info-window h3 {
+  margin: 10px 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+  padding-right: 20px;
+  color: #333;
+}
+
+.info-window p {
+  margin: 8px 0;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #555;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 992px) {
+  .event-map-layout {
+    flex-direction: column;
+  }
+  
+  .event-list-side,
+  .event-map-side {
+    width: 100%;
+    max-height: none;
+  }
+  
+  .event-map-container {
+    height: 500px;
+  }
+}

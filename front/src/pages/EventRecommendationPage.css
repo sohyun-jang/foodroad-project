@@ -8,19 +8,20 @@
   
   /* 검색 컨테이너 */
   .search-container {
-    background-color: #1e3a8a;
+    background-color: #f5f5f5;
     padding: 20px 0 30px;
     margin-bottom: 30px;
   }
   
   .search-box {
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: white;
+    max-width: 1165px;
+    margin: 20px auto;
+    background-color: #1e3a8a; 
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     position: relative;
+    border: 2px solid #1e3a8a; 
   }
   
   .search-inputs {
@@ -38,7 +39,7 @@
     display: block;
     font-size: 14px;
     font-weight: 600;
-    color: #333;
+    color: #ffffff; 
     margin-bottom: 8px;
   }
   
@@ -60,10 +61,11 @@
     border-radius: 4px;
     font-size: 15px;
     background-color: white;
+    color: #333; 
   }
   
   .search-button {
-    background-color: #ff5722;
+    background-color: #FF6B00;
     color: white;
     border: none;
     border-radius: 4px;
@@ -76,7 +78,7 @@
   }
   
   .search-button:hover {
-    background-color: #e64a19;
+    background-color: #2f5e8f;
   }
   
   /* 캘린더 */
@@ -91,8 +93,47 @@
     z-index: 100;
     margin-top: 10px;
     padding: 20px;
+    border: 1px solid #1e3a8a;
   }
-  
+
+  .calendar-controls-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 0 5px;
+  }
+
+  .calendar-global-nav-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px 10px;
+    color: #1e3a8a;
+    font-weight: bold;
+  }
+
+  .calendar-global-nav-button:hover {
+    color: #FF6B00;
+  }
+
+  .calendar-global-year-select {
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: white;
+    flex-grow: 0;
+    min-width: 100px;
+  }
+
+  .calendar-global-year-select:focus {
+    outline: none;
+    border-color: #1e3a8a;
+  }
+
   .calendar-wrapper {
     display: flex;
     gap: 20px;
@@ -110,7 +151,7 @@
     margin-bottom: 15px;
     color: #333;
   }
-  
+
   .calendar-weekdays {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -136,20 +177,54 @@
     border-radius: 50%;
     font-size: 14px;
     transition: all 0.2s;
+    position: relative;
   }
   
   .calendar-day:hover {
     background-color: #f0f0f0;
   }
   
+  /* 날짜 선택 스타일 */
   .calendar-day.selected {
     background-color: #1e3a8a;
     color: white;
+    z-index: 2;
   }
   
-  .calendar-day.today {
-    border: 2px solid #1e3a8a;
-    font-weight: bold;
+  /* 시작 날짜 스타일 */
+  .calendar-day.start-date {
+    background-color: #1e3a8a;
+    color: white;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  /* 종료 날짜 스타일 */
+  .calendar-day.end-date {
+    background-color: #1e3a8a;
+    color: white;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  /* 범위 내 날짜 스타일 */
+  .calendar-day.in-range {
+    background-color: rgba(30, 58, 138, 0.2);
+    color: #333;
+    border-radius: 0;
+  }
+  
+  /* 범위 내 날짜에 호버 시 */
+  .calendar-day.in-range:hover {
+    background-color: rgba(30, 58, 138, 0.3);
+  }
+
+  
+  /* 선택된 상태의 오늘 날짜 */
+  .calendar-day.today.selected,
+  .calendar-day.today.start-date,
+  .calendar-day.today.end-date {
+    border: 2px solid #fff;
   }
   
   .calendar-day.empty {
@@ -174,49 +249,40 @@
   
   /* 행사 표시 컨테이너 */
   .event-display-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px 40px;
+    max-width: 1242px;
+    margin: -60px auto ;
+    padding: 0 20px;
   }
   
-  .events-list-container {
+  /* 이벤트 맵 레이아웃 */
+  .event-map-layout {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start; 
+  }
+  
+  /* 이벤트 목록 사이드 */
+  .events-list-side {
+    flex: 1;
     background-color: white;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    border: 1px solid #1e3a8a;
   }
   
-  .events-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #eee;
+  /* 지도 사이드 */
+  .map-side {
+    flex: 1.25; 
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+    height: 700px;
+    border: 1px solid;
   }
   
-  .events-header h2 {
-    font-size: 20px;
-    font-weight: 600;
-    color: #333;
-    margin: 0;
-  }
-  
-  .events-filter select {
-    padding: 8px 12px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
-    color: #333;
-  }
-  
-  .events-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  /* 행사 카드 */
   .event-card {
     display: flex;
     background-color: white;
@@ -225,8 +291,7 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     transition: all 0.2s ease;
     cursor: pointer;
-    border: 1px solid rgba(0, 0, 0, 0.04);
-    position: relative;
+    border: 1px solid;
   }
   
   .event-card:hover {
@@ -277,7 +342,7 @@
   }
   
   .favorite-button:hover, .favorite-button.favorited {
-    color: #FFD700;
+    color: #1e3a8a;
     background-color: rgba(255, 255, 255, 0.9);
   }
   
@@ -348,6 +413,7 @@
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #1e3a8a;
   }
   
   .detailed-event-image {
@@ -391,7 +457,7 @@
   }
   
   .apply-button {
-    background-color: #ff5722;
+    background-color: #1e3a8a;
     color: white;
     border: none;
     border-radius: 4px;
@@ -404,7 +470,219 @@
   }
   
   .apply-button:hover {
-    background-color: #e64a19;
+    background-color: #2f5e8f;
+  }
+  
+  /* 지도 컨테이너 */
+  .map-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    border: 1px solid #1e3a8a;
+  }
+  
+  .map-container h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* 이벤트 맵 레이아웃 */
+  .event-map-layout {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+  }
+  
+  /* 이벤트 목록 사이드 */
+  .events-list-side {
+    flex: 2;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #1e3a8a;
+  }
+  
+  .events-list-side h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .events-list {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .event-card {
+    display: flex;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #1e3a8a;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-image {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+  }
+  
+  .event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .event-info {
+    padding: 12px 15px;
+    flex-grow: 1;
+  }
+  
+  .event-info h3 {
+    font-size: 16px;
+    margin: 0 0 8px;
+    color: #333;
+  }
+  
+  .event-date, .event-location {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  .event-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  
+  .highlight {
+    font-size: 12px;
+    padding: 3px 8px;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    color: #555;
+  }
+  
+  /* 지도 사이드 */
+  .map-side {
+    flex: 1;
+    position: relative;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    border: 1px solid #1e3a8a;
+  }
+  
+  .map-side:before {
+    content: '';
+    display: block;
+    padding-top: 125%;
+  }
+  
+  .map-side .event-map-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+  }
+  
+  /* 페이지네이션 컨트롤 */
+  .pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 15px;
+  }
+  
+  .pagination-button {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid #1e3a8a;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .pagination-button:hover:not(:disabled) {
+    background-color: #f5f5f5;
+    border-color: #ccc;
+  }
+  
+  .pagination-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .page-indicator {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* 반응형 레이아웃 */
+  @media (max-width: 992px) {
+    .event-map-layout {
+      flex-direction: column;
+    }
+    
+    .map-side {
+      margin-top: 20px;
+    }
+    
+    .map-side:before {
+      padding-top: 75%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .event-display-container {
+      padding: 0 15px;
+    }
+    
+    .events-list-side {
+      padding: 15px;
+    }
+    
+    .map-side:before {
+      padding-top: 100%;
+    }
+    
+    .event-card {
+      flex-direction: column;
+    }
+    
+    .event-image {
+      width: 100%;
+      height: 140px;
+    }
   }
   
   /* 반응형 스타일 */
@@ -413,8 +691,16 @@
       flex-direction: column;
     }
     
+    .search-button {
+      width: 100%;
+    }
+    
     .calendar-wrapper {
       flex-direction: column;
+    }
+    
+    .map-container {
+      padding: 15px;
     }
     
     .event-card {
